@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuloPass Logo Önizleme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .logo-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+        .glow {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, #f43f5e, #6366f1);
+            filter: blur(20px);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+    </svg>
+    </style>
+</head>
+<body>
+
+    <div class="glass-panel">
+        <div class="logo-container">
+            <div class="glow"></div>
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative z-10 w-full h-full">
+                <!-- Dış Rulo Çerçevesi -->
+                <rect x="5" y="30" width="90" height="40" rx="20" stroke="white" stroke-opacity="0.1" stroke-width="1" />
+                
+                <!-- Ana Akış Formu -->
+                <path d="M25 35V65M25 35H45C52 35 52 48 45 48H25M42 48L55 65H75L60 48L75 48L85 50L75 52" 
+                      stroke="url(#paint0_linear)" 
+                      stroke-width="6" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" />
+                
+                <!-- Hız Çizgileri -->
+                <path d="M10 45H18" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" />
+                <path d="M7 55H15" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" />
+                
+                <defs>
+                    <linearGradient id="paint0_linear" x1="25" y1="35" x2="85" y2="65" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#f43f5e" />
+                        <stop offset="1" stop-color="#6366f1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="text-center">
+            <h1 class="text-5xl font-black tracking-tighter italic">
+                <span class="bg-gradient-to-r from-rose-500 to-indigo-500 bg-clip-text text-transparent">RULO</span>PASS
+            </h1>
+            <p class="text-slate-400 mt-2 text-sm tracking-widest uppercase">Premium DPI Bypass Engine</p>
+        </div>
+
+        <div class="flex gap-4 mt-4">
+            <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs text-slate-300">Modern</div>
+            <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs text-slate-300">Hızlı</div>
+            <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs text-slate-300">Rulokat Special</div>
+        </div>
+    </div>
+
+</body>
+</html>
